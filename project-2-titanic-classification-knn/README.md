@@ -12,7 +12,7 @@ A K-Nearest Neighbors classifier that predicts whether a Titanic passenger survi
 - Built an interactive Streamlit demo so you can adjust a passenger's details (class, age, fare, sex, etc.) and see a live survival prediction
 
 ## Live Website Link
-[paste your Streamlit app URL here once deployed]
+https://decodelabs-virtual-ai-internship-atgcpma6guujkuuwc3dlkm.streamlit.app/
 
 ## Files in this folder
 - `Project2_Titanic_Survival_Classification.ipynb` — full notebook: data cleaning, model training, evaluation
