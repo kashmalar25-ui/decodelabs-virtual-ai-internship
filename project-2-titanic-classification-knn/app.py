@@ -9,6 +9,7 @@ and lets users adjust a passenger's details to see a live survival prediction.
 
 import streamlit as st
 import pandas as pd
+import os
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
@@ -19,7 +20,8 @@ st.set_page_config(page_title="Titanic Survival Classifier", page_icon="🚢")
 # --- Load and prepare the data (cached so it only runs once) ---
 @st.cache_resource
 def load_and_train():
-    df = pd.read_csv("train.csv")
+    csv_path = os.path.join(os.path.dirname(__file__), "train.csv")
+    df = pd.read_csv(csv_path)
 
     df = df.drop(columns=["PassengerId", "Name", "Ticket", "Cabin"])
     df["Age"] = df["Age"].fillna(df["Age"].median())
